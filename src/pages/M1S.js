@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import Navbar from '../components/Navbar'
+import { BsArrowLeftSquareFill,BsArrowRightSquareFill } from "react-icons/bs";
 
 import M1clock from '../m1clock.png'
 import M1pair from '../m1buddy.png'
@@ -11,7 +11,7 @@ import M1Tether from '../m1srainingcat.png'
 import RainingCat1 from '../rainingcat1.png'
 import RainingCat2 from '../rainingcat2.png'
 import RainingCat3 from '../rainingcat3.png'
-import { BsArrowLeftSquareFill,BsArrowRightSquareFill } from "react-icons/bs";
+
 
 const RainingCatMech = [
   {
@@ -128,7 +128,6 @@ function PaginatedItems({ itemsPerPage }) {
 const M1S = () => {
   return (
     <div>
-        <Navbar page='M1S'/>
         <div className='h-full flex flex-col items-center justify-center mx-3 p-3 '>
             <div className='text-center'>
                 <div className='mb-6'>

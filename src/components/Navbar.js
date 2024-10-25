@@ -1,19 +1,37 @@
 import React, { useState } from 'react';
 import { FaDiscord, FaSquareXTwitter } from "react-icons/fa6";
 import { FaTimes,FaBars } from "react-icons/fa";
+
+import { Outlet,useLocation } from 'react-router-dom';
+
+
 const Navbar = ({page}) => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  return (
-    <nav className='flex justify-between items-center px-2 bg-primary-500'>
-      <div className="font-heading text-3xl">{page}</div>
+  const getPageName = () => {
+    switch (location.pathname) {
+      case '/':
+        return 'Home';
+      case '/m1s':
+        return 'M1S';
 
-        {/* Hamburger Icon */}
+      default:
+        return 'Page'; // Default page name if no match is found
+    }
+  };
+
+
+  return (
+    <div>
+    <nav className='flex justify-between items-center px-2 bg-primary-500'>
+      <div className="font-heading text-3xl">{getPageName()}</div>
+
       <div className="md:hidden" onClick={toggleMenu}>
         {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
@@ -49,6 +67,8 @@ const Navbar = ({page}) => {
       </ul>
 
     </nav>
+    <Outlet/>
+    </div>
   );
 };
 
