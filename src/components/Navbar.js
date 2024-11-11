@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { FaDiscord, FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { Outlet, useLocation } from "react-router-dom";
-import Logo from "../raidbin-logo-test.png";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
