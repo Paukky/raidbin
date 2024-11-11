@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
@@ -7,7 +7,8 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Raidbin | All Rights Reserved.
       </p>
       <p className="text-sm">
-        FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd. FINAL FANTASY XIV &copy; SQUARE ENIX CO., LTD. 
+        FINAL FANTASY is a registered trademark of Square Enix Holdings Co.,
+        Ltd. FINAL FANTASY XIV &copy; SQUARE ENIX CO., LTD.
       </p>
     </footer>
   );
