@@ -62,7 +62,7 @@ function Images({ currentItems }) {
     <>
       {currentItems &&
         currentItems.map((item, index) => (
-          <div key={index} className=" max-w-screen-md h-auto mb-4 fixed">
+          <div key={index} className=" max-w-screen-md h-auto mb-4">
             {item.image && (
               <img
                 src={item.image}
