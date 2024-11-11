@@ -47,33 +47,63 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex flex-row items-center space-x-4">
-        <button className="hover:bg-secondary-800 p-4">
-            <a href="/suggestions">Have a Suggestions?</a>
-        </button>
-        <button className="hover:bg-secondary-800 p-4">
-          <a href="https://twitter.com/ErikkaChisaka"><FaDiscord size={23} /></a>
-        </button>
-        <button className="hover:bg-secondary-800 p-4">
-          <a href="https://twitter.com/ErikkaChisaka"><FaSquareXTwitter size={23} /></a>
-        </button>
+      {getPageName() === 'Home' ? (
+        <>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="https://twitter.com/ErikkaChisaka" target="_blank" rel="noopener noreferrer"><FaSquareXTwitter size={23} /></a>
+          </button>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="/suggestions">Have a Suggestion?</a>
+          </button>
+        </>
+      ) : (
+        <>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="/m1s"><b>M1S</b></a>
+          </button>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="/m2s"><b>M2S</b></a>
+          </button>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="/m3s"><b>M3S</b></a>
+          </button>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="/m4s"><b>M4S</b></a>
+          </button>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="https://twitter.com/ErikkaChisaka" target="_blank" rel="noopener noreferrer"><FaSquareXTwitter size={23} /></a>
+          </button>
+          <button className="hover:bg-secondary-800 p-4">
+            <a href="/suggestions">Have a Suggestion?</a>
+          </button>
+        </>
+      )}
+
       </ul>
 
       {/* Mobile Menu */}
       <ul className={`flex flex-col md:hidden bg-primary-500 text-white absolute top-14 p-5 right-0 w-full  transition-transform h-screen z-10 ${isOpen ? 'block' : 'hidden'}`}>
-           <li className="hover:bg-secondary-800 p-3 flex items-center">
-            <a href="/suggestions">Have a Suggestions?</a>
-          </li>
         <li className="hover:bg-secondary-800 p-3 flex items-center">
-          <a href="https://twitter.com/ErikkaChisaka" className="flex items-center">
-            <FaDiscord size={23} className="mr-2" />
-            Discord
-          </a>
+            <a href="/m4s"><b>M1S</b></a>
         </li>
+        <li className="hover:bg-secondary-800 p-3 flex items-center">
+            <a href="/m4s"><b>M2S</b></a>
+        </li>   
+        <li className="hover:bg-secondary-800 p-3 flex items-center">
+            <a href="/m4s"><b>M3S</b></a>
+        </li>
+        <li className="hover:bg-secondary-800 p-3 flex items-center">
+            <a href="/m4s"><b>M4S</b></a>
+        </li>
+        <hr className='my-2'/>
         <li className="hover:bg-secondary-800 p-3 flex items-center">
           <a href="https://twitter.com/ErikkaChisaka" className="flex items-center">
             <FaSquareXTwitter size={23} className="mr-2" />
             Twitter
           </a>
+        </li>
+        <li className="hover:bg-secondary-800 p-3 flex items-center">
+          <a href="/suggestions">Have a Suggestions?</a>
         </li>
       </ul>
 

@@ -56,7 +56,7 @@ function Images({ currentItems }) {
     <>
       {currentItems &&
         currentItems.map((item, index) => (
-          <div key={index} className=" max-w-screen-md h-auto mb-4">
+          <div key={index} className=" max-w-screen-md h-auto mb-4 fixed">
             {item.image && (
               <img src={item.image} alt={`Item ${index + 1}`} className="w-full h-auto" />
             )}
