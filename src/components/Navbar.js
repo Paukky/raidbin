@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaSquareXTwitter, FaChevronDown } from "react-icons/fa6";
 import { FaTimes, FaBars } from "react-icons/fa";
-import { Outlet, useLocation,Link } from "react-router-dom";
+import { Outlet,Link } from "react-router-dom";
 import Logo from "../logo-2.png";
 
 const Navbar = () => {
@@ -71,6 +71,8 @@ const Navbar = () => {
                 </Link>
             </ul>
           </div>
+          
+          
 
           <Link
             to="https://twitter.com/ErikkaChisaka"
