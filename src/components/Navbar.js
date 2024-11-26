@@ -35,7 +35,7 @@ const Navbar = () => {
         </a>
 
         <div className="md:hidden" onClick={toggleMobileMenu}>
-          {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+          {isMobileOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
 
         {/* Desktop Menu */}
@@ -62,7 +62,6 @@ const Navbar = () => {
                 <Link to="/m2s" className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
                   <b>M2S</b>
                 </Link>
-
                 <Link to="/m3s" className="hover:bg-secondary-600 px-9 py-4"  onClick={() => setIsOpen(false)}>
                   <b>M3S</b>
                 </Link>
@@ -71,9 +70,7 @@ const Navbar = () => {
                 </Link>
             </ul>
           </div>
-          
-          
-
+        
           <Link
             to="https://twitter.com/ErikkaChisaka"
             className="hover:bg-secondary-800 p-4"
@@ -82,6 +79,31 @@ const Navbar = () => {
           </Link>
           <Link to="/suggestions" className="hover:bg-secondary-800 p-4">
             Have a Suggestion?
+          </Link>
+        </ul>
+
+        
+        {/* Mobile Menu */}
+        <ul className={` md:hidden bg-primary-500 text-white absolute top-10 p-5 right-0 w-full  h-screen z-30 ${isMobileOpen ? 'block' : 'hidden'}`}>
+          <Link to="/m1s" className="hover:bg-secondary-800 p-3 flex items-center" onClick={() => setIsMobileOpen(false)} >
+            <b>M1S</b>
+          </Link>
+          <Link to="/m2s" className="hover:bg-secondary-800 p-3 flex items-center" onClick={() => setIsMobileOpen(false)} >
+            <b>M2S</b>
+          </Link>
+          <Link to="/m3s" className="hover:bg-secondary-800 p-3 flex items-center" onClick={() => setIsMobileOpen(false)} >
+            <b>M3S</b>
+          </Link>
+          <Link to="/m4s" className="hover:bg-secondary-800 p-3 flex items-center" onClick={() => setIsMobileOpen(false)} >
+            <b>M4S</b>
+          </Link>    
+          <hr className='my-2'/>
+          <Link to="https://twitter.com/ErikkaChisaka" className="hover:bg-secondary-800 p-3 flex items-center" >
+            <FaSquareXTwitter size={23} className="mr-2" />
+            Twitter
+          </Link>
+          <Link to="/suggestions" className="hover:bg-secondary-800 p-3 flex items-center" onClick={() => setIsMobileOpen(false)} >
+            Have a Suggestions?
           </Link>
         </ul>
       </nav>
