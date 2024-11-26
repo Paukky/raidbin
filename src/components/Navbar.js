@@ -1,147 +1,99 @@
-import React, { useState } from "react";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import React, { useState, useEffect, useRef } from "react";
+import { FaSquareXTwitter, FaChevronDown } from "react-icons/fa6";
 import { FaTimes, FaBars } from "react-icons/fa";
-import { Outlet, useLocation } from "react-router-dom";
-
+import { Outlet, useLocation,Link } from "react-router-dom";
+import Logo from "../logo-2.png";
 
 const Navbar = () => {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const dropdownRef = useRef(null);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  const getPageName = () => {
-    switch (location.pathname) {
-      case "/":
-        return "Home";
-      case "/m1s":
-        return "M1S";
-      case "/m2s":
-        return "M2S";
-      case "/m3s":
-        return "M3S";
-      case "/m4s":
-        return "M4S";
-      case "/suggestions":
-        return "Suggestion";
-      default:
-        return "Raidbin"; // Default page name if no match is found
+  const handleClickOutside = (event) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target) &&
+      !event.target.closest("a")
+    ) {
+      setIsOpen(false);
     }
   };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <div>
       <nav className="flex justify-between items-center px-2 bg-primary-500">
         <a href="/">
-          <p className="font-heading text-3xl">Raidbin</p>
+          <img src={Logo} className="md:w-1/3 w-1/2" />
         </a>
-        {/* <div className="font-heading text-3xl">{getPageName()}</div> */}
 
-        <div className="md:hidden" onClick={toggleMenu}>
+        <div className="md:hidden" onClick={toggleMobileMenu}>
           {isOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex flex-row items-center space-x-4">
-          {getPageName() === "Home" ? (
-            <>
-              <button className="hover:bg-secondary-800 p-4">
-                <a
-                  href="https://twitter.com/ErikkaChisaka"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaSquareXTwitter size={23} />
-                </a>
-              </button>
-              <button className="hover:bg-secondary-800 p-4">
-                <a href="/suggestions">Have a Suggestion?</a>
-              </button>
-            </>
-          ) : (
-            <>
-              <button className="hover:bg-secondary-800 p-4">
-                <a href="/m1s">
-                  <b>M1S</b>
-                </a>
-              </button>
-              <button className="hover:bg-secondary-800 p-4">
-                <a href="/m2s">
-                  <b>M2S</b>
-                </a>
-              </button>
-              <button className="hover:bg-secondary-800 p-4">
-                <a href="/m3s">
-                  <b>M3S</b>
-                </a>
-              </button>
-              <button className="hover:bg-secondary-800 p-4">
-                <a href="/m4s">
-                  <b>M4S</b>
-                </a>
-              </button>
-              <button className="hover:bg-secondary-800 p-4">
-                <a
-                  href="https://twitter.com/ErikkaChisaka"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaSquareXTwitter size={23} />
-                </a>
-              </button>
-              <button className="hover:bg-secondary-800 p-4">
-                <a href="/suggestions">Have a Suggestion?</a>
-              </button>
-            </>
-          )}
-        </ul>
-
-        {/* Mobile Menu */}
-        <ul
-          className={`flex flex-col md:hidden bg-primary-500 text-white absolute top-14 p-5 right-0 w-full  transition-transform h-screen z-10 ${
-            isOpen ? "block" : "hidden"
-          }`}
-        >
-          <li className="hover:bg-secondary-800 p-3 flex items-center">
-            <a href="/m4s">
-              <b>M1S</b>
-            </a>
-          </li>
-          <li className="hover:bg-secondary-800 p-3 flex items-center">
-            <a href="/m4s">
-              <b>M2S</b>
-            </a>
-          </li>
-          <li className="hover:bg-secondary-800 p-3 flex items-center">
-            <a href="/m4s">
-              <b>M3S</b>
-            </a>
-          </li>
-          <li className="hover:bg-secondary-800 p-3 flex items-center">
-            <a href="/m4s">
-              <b>M4S</b>
-            </a>
-          </li>
-          <hr className="my-2" />
-          <li className="hover:bg-secondary-800 p-3 flex items-center">
-            <a
-              href="https://twitter.com/ErikkaChisaka"
-              className="flex items-center"
+          <div className="relative inline-block text-left" ref={dropdownRef}>
+            <button
+              className="flex flex-row items-center justify-center hover:bg-secondary-800 p-4 focus:bg-secondary-800"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleMenu();
+              }}
             >
-              <FaSquareXTwitter size={23} className="mr-2" />
-              Twitter
-            </a>
-          </li>
-          <li className="hover:bg-secondary-800 p-3 flex items-center">
-            <a href="/suggestions">Have a Suggestions?</a>
-          </li>
+              <p className="mx-1">Savage</p>
+              <FaChevronDown size={15} />
+            </button>
+            <ul
+              className={`${
+                isOpen ? "absolute bg-primary-700 z-20 flex flex-col" : "hidden"
+              }`}
+            >
+              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
+                <Link to="/m1s" >
+                  <b>M1S</b>
+                </Link>
+              </li>
+              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
+                <Link to="/m2s">
+                  <b>M2S</b>
+                </Link>
+              </li>
+              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
+                <Link to="/m3s">
+                  <b>M3S</b>
+                </Link>
+              </li>
+              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
+                <Link to="/m4s">
+                  <b>M4S</b>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <Link
+            to="https://twitter.com/ErikkaChisaka"
+            className="hover:bg-secondary-800 p-4"
+          >
+            <FaSquareXTwitter size={23} />
+          </Link>
+          <Link to="/suggestions" className="hover:bg-secondary-800 p-4">
+            Have a Suggestion?
+          </Link>
         </ul>
       </nav>
       <Outlet />
     </div>
   );
 };
+
 
 export default Navbar;

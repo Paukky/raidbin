@@ -1,8 +1,8 @@
 import React from "react";
-import M3position from "../m3sposition.png";
-import M3SCCW from "../m3ssupportccw.png";
-import M3SFusefield from "../m3sfusefield.png";
-import M3SNoKB from "../m3sNoKBI.png";
+import M3position from "../assets/m3s/m3sposition.png";
+import M3SCCW from "../assets/m3s/m3ssupportccw.png";
+import M3SFusefield from "../assets/m3s/m3sfusefield.png";
+import M3SNoKB from "../assets/m3s/m3sNoKBI.png";
 const M3S = () => {
   return (
     <div>

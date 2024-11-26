@@ -1,12 +1,12 @@
 import React from "react";
-import M2spread1 from "../m2sspread1.png";
-import M2spread2 from "../m2sspread2.png";
-import M2Group from "../m2sgroup.png";
-import M2MK from "../m2MK.png";
-import M2Beat2 from "../m2sb2.png";
-import M2ClockDefam from "../m2sclockdefam.png";
-import M2ColourDefam from "../m2scolourdefam.png";
-import M2Rotten from "../m2srotten.png";
+import M2spread1 from "../assets/m2s/m2sspread1.png";
+import M2spread2 from "../assets/m2s/m2sspread2.png";
+import M2Group from "../assets/m2s/m2sgroup.png";
+import M2MK from "../assets/m2s/m2MK.png";
+import M2Beat2 from "../assets/m2s/m2sb2.png";
+import M2ClockDefam from "../assets/m2s/m2sclockdefam.png";
+import M2ColourDefam from "../assets/m2s/m2scolourdefam.png";
+import M2Rotten from "../assets/m2s/m2srotten.png";
 const M2S = () => {
   return (
     <div>
@@ -138,7 +138,9 @@ const M2S = () => {
                 </h5>
                 <p class=" mb-3 px-1">
                   During Beat 3, these are your defamation position when it's
-                  your turn to stand near the wall
+                  your turn to stand near the wall.
+                  <br/>
+                  <b className="text-text-tank"> OT</b> and <b className="text-text-healer">H2</b> swap their clock spot
                 </p>
               </div>
             </div>

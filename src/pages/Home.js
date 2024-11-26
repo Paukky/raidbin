@@ -1,6 +1,6 @@
 import React from "react";
 import HeroImage from "../heroraid2.png"; // Make sure this path is correct
-
+import Cards from "../components/Cards";
 const Home = () => {
   return (
     <React.Fragment>
@@ -17,7 +17,10 @@ const Home = () => {
           <p className="mt-4 text-lg text-white">
             Your one hub for all NA PF Strats
           </p>
-          <div>
+          <Cards/>
+
+
+          {/* <div>
             <a href="/m1s">
               <button className="mt-6 px-4 py-2 mx-2 bg-background-500 text-white rounded-md hover:bg-background-700">
                 M1S
@@ -37,8 +40,8 @@ const Home = () => {
               <button className="mt-6 px-4 py-2 mx-2 bg-background-500 text-white rounded-md hover:bg-background-700">
                 M4S
               </button>
-            </a>
-          </div>
+            </a> */}
+
         </div>
       </div>
 
