@@ -56,26 +56,19 @@ const Navbar = () => {
                 isOpen ? "absolute bg-primary-700 z-20 flex flex-col" : "hidden"
               }`}
             >
-              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
-                <Link to="/m1s" >
+                <Link to="/m1s" className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)} >
                   <b>M1S</b>
                 </Link>
-              </li>
-              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
-                <Link to="/m2s">
+                <Link to="/m2s" className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
                   <b>M2S</b>
                 </Link>
-              </li>
-              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
-                <Link to="/m3s">
+
+                <Link to="/m3s" className="hover:bg-secondary-600 px-9 py-4"  onClick={() => setIsOpen(false)}>
                   <b>M3S</b>
                 </Link>
-              </li>
-              <li className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
-                <Link to="/m4s">
+                <Link to="/m4s" className="hover:bg-secondary-600 px-9 py-4" onClick={() => setIsOpen(false)}>
                   <b>M4S</b>
                 </Link>
-              </li>
             </ul>
           </div>
 
