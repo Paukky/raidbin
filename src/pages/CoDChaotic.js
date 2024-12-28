@@ -51,7 +51,7 @@ const CoDChaotic = () => {
                         [Alliance A] Pair Position
                         </h5>
                         <p class="mb-3 px-1">
-                        M1,M2 and R1 will bait the hit by standing inward of the Adds
+                        MT,H1 and R1 will bait the hit by standing inward of the Adds
                         </p>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ const CoDChaotic = () => {
                         [Alliance C] Pair Position
                         </h5>
                         <p class="mb-3 px-1">
-                        M1,M2 and R1 will bait the hit by standing inward of the Adds
+                        MT,H1 and R1 will bait the hit by standing inward of the Adds
                         </p>
                     </div>
                 </div>
