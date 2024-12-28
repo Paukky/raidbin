@@ -156,8 +156,8 @@ const CoDChaotic = () => {
             <div className="flex flex-col items-center justify-center bg-secondary-700 p-2 ">
             <p className="font-heading text-3xl">Bramble Phase</p>
             <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
-                <video className="sm:w-1/3" src={Bramble1} controls/>
-                <video className="sm:w-1/3" src={Bramble2} controls/>
+                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={Bramble1} controls/>
+                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={Bramble2} controls/>
             </div>
             </div>
         </div>
@@ -166,8 +166,8 @@ const CoDChaotic = () => {
             <p className="font-heading text-3xl">Looming Chaos</p>
             <p className="text-xl"><i>Swaps</i></p>
             <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
-                <video className="sm:w-1/3" src={LoomingChaos} controls/>
-                <video className="sm:w-1/3" src={ChasersAoe} controls/>
+                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={LoomingChaos} controls/>
+                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={ChasersAoe} controls/>
             </div>
             </div>
         </div>
