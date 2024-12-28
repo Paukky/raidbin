@@ -6,6 +6,7 @@ import M1S from "./pages/M1S";
 import M2S from "./pages/M2S";
 import M3S from "./pages/M3S";
 import M4S from "./pages/M4S";
+import Cod from "./pages/CoDChaotic"
 import Suggestion from "./pages/Suggestion";
 import Home from "./pages/Home";
 
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/m2s" element={<M2S />} />
         <Route path="/m3s" element={<M3S />} />
         <Route path="/m4s" element={<M4S />} />
+        <Route path="/cod" element={<Cod />} />
         <Route path="/suggestions" element={<Suggestion />} />
       </Routes>
       <Footer />

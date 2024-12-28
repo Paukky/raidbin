@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       {
-        //TODO: ADD About section
+        //TODO: ADD Ulti Section
         /* <div className='bg-primary-50 py-5'>
         <p className='text-center font-heading text-primary-950 text-4xl mb-10'> Why I made this website?</p>
         <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center items-center gap-4 w-full max-w-5xl mx-auto'>
