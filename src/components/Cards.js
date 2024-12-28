@@ -9,7 +9,7 @@ const images = importAll(require.context('../assets/bossportrait', false, /\.(pn
 
 const Cards = () => {
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 items-center justify-center m-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 items-center justify-center m-4 pt-40 sm:pt-0">
             {bossData.map((data, key) => (
                 <div
                     key={key}

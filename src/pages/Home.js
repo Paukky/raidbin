@@ -11,14 +11,13 @@ const Home = () => {
           className="object-cover w-full h-full opacity-20"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center mt-10 md:m-auto">
-          <h1 className="text-4xl font-bold text-white text-center">
+          <h1 className="text-4xl font-bold text-white text-center hidden sm:block">
             Welcome to Raidbin
           </h1>
-          <p className="mt-4 text-lg text-white">
+          <p className="mt-4 text-lg text-white hidden sm:block">
             Your one hub for all NA PF Strats
           </p>
           <Cards/>
-
         </div>
       </div>
 

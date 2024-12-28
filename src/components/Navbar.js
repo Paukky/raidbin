@@ -48,7 +48,7 @@ const Navbar = () => {
                 toggleMenu();
               }}
             >
-              <p className="mx-1">Savage</p>
+              <p className="mx-1 ">Savage</p>
               <FaChevronDown size={15} />
             </button>
             <ul
@@ -70,7 +70,12 @@ const Navbar = () => {
                 </Link>
             </ul>
           </div>
-        
+          <Link
+            to ="/cod"
+            className="hover:bg-secondary-800 p-4 text-center"
+          >
+            Cloud of Darkness
+          </Link>
           <Link
             to="https://twitter.com/ErikkaChisaka"
             className="hover:bg-secondary-800 p-4"
@@ -97,6 +102,10 @@ const Navbar = () => {
           <Link to="/m4s" className="hover:bg-secondary-800 p-3 flex items-center" onClick={() => setIsMobileOpen(false)} >
             <b>M4S</b>
           </Link>    
+          <hr className='my-2'/>
+          <Link to ="/cod" className="hover:bg-secondary-800 p-3 flex items-center" onClick={() => setIsMobileOpen(false)}>
+            <b>Cloud of Darkness</b>
+          </Link>
           <hr className='my-2'/>
           <Link to="https://twitter.com/ErikkaChisaka" className="hover:bg-secondary-800 p-3 flex items-center" >
             <FaSquareXTwitter size={23} className="mr-2" />

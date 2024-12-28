@@ -9,6 +9,8 @@ import Spreads from '../assets/cod/AlliancewideSpread.png'
 import WildCharge from '../assets/cod/WildCharge.png'
 import Bramble1 from '../assets/cod/BramblePlacement.mp4'
 import Bramble2 from '../assets/cod/BrambleTether.mp4'
+import LoomingChaos from '../assets/cod/LoomingChaos.mp4'
+import ChasersAoe from '../assets/cod/ChaserAoe.mp4'
 const CoDChaotic = () => {
   return (
     <div>
@@ -114,7 +116,7 @@ const CoDChaotic = () => {
                     </div>
                 </div>
             </div>
-            <p className="font-heading text-3xl my-4">General Configuration</p>
+            <p className="font-heading text-3xl my-4">Alliance's Position</p>
             <div className="grid grid-cols-2 grid-rows-1 gap-4 max-w-screen-lg ">
                 <div class=" min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
                     <img
@@ -124,10 +126,10 @@ const CoDChaotic = () => {
                     />
                     <div class="sm:p-3">
                         <h5 class="m-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 bg-">
-                        [Alliance A] Spread Position
+                        Raidwide Spreads
                         </h5>
                         <p class="mb-3 px-1">
-                        Stand near max melee range to avoid being hit by two lasers
+                        Spread out evenly as described in the diagram above
                         </p>
                     </div>
                 </div>
@@ -151,11 +153,21 @@ const CoDChaotic = () => {
           </div>
         </div>
         <div>
-            <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary-950 to-primary-400 ">
+            <div className="flex flex-col items-center justify-center bg-secondary-700 p-2 ">
             <p className="font-heading text-3xl">Bramble Phase</p>
-            <div className='flex flex-col m-2 gap-2 sm:flex-row'>
-                <video className="h-full w-full" src={Bramble1} controls/>
-                <video className="h-full w-full" src={Bramble2} controls/>
+            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
+                <video className="sm:w-1/3" src={Bramble1} controls/>
+                <video className="sm:w-1/3" src={Bramble2} controls/>
+            </div>
+            </div>
+        </div>
+        <div>
+            <div className="flex flex-col items-center justify-center bg-primary-800 p-2">
+            <p className="font-heading text-3xl">Looming Chaos</p>
+            <p className="text-xl"><i>Swaps</i></p>
+            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
+                <video className="sm:w-1/3" src={LoomingChaos} controls/>
+                <video className="sm:w-1/3" src={ChasersAoe} controls/>
             </div>
             </div>
         </div>
