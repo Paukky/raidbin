@@ -16,7 +16,7 @@ import ChasersAoe from '../assets/cod/ChaserAoe.mp4'
 const CoDChaotic = () => {
   return (
     <div>
-        <div className="h-full flex flex-col items-center justify-center mx-3 p-3 bg-primary-800">
+        <div className="h-full flex flex-col items-center justify-center mx-3 p-3">
         <div className="text-center">
           <div className="mb-6">
             <p className="font-heading text-4xl md:text-left">
