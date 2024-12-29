@@ -24,6 +24,7 @@ const CoDChaotic = () => {
               <i>Knowing the fight is half of the battle</i>
             </p>
           </div>
+          <p className="font-heading text-3xl my-4">A and C Alliance's Position for Stygian(Adds)</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 grid-rows-2 gap-4 max-w-screen-lg ">
                 <div class=" min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
                     <img
