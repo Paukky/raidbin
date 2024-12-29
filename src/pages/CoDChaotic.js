@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import SpreadA from '../assets/cod/SpreadA.png'
 import SpreadC from '../assets/cod/SpreadC.png'
 import PairA from '../assets/cod/PairA.png'
@@ -21,7 +22,7 @@ const CoDChaotic = () => {
               Pre-Pull Guidelines
             </p>
             <p className="md:text-left text-xl text-accent-100">
-              <i>Knowing the fight is half of the battle</i>
+              <i>Knowing the fight is half of the battle || Aurelia's raidplan: <Link to="https://raidplan.io/plan/o1ZfvSL3dCiqjwfJ"><u>Link</u></Link></i>
             </p>
           </div>
           <p className="font-heading text-3xl my-4">A and C Alliance's Position for Stygian(Adds)</p>
