@@ -10,12 +10,13 @@ import Spreads from '../assets/cod/AlliancewideSpread.png'
 import WildCharge from '../assets/cod/WildCharge.png'
 import Bramble1 from '../assets/cod/BramblePlacement.mp4'
 import Bramble2 from '../assets/cod/BrambleTether.mp4'
+import Laser from '../assets/cod/Laser.mp4'
 import LoomingChaos from '../assets/cod/LoomingChaos.mp4'
 import ChasersAoe from '../assets/cod/ChaserAoe.mp4'
 const CoDChaotic = () => {
   return (
     <div>
-        <div className="h-full flex flex-col items-center justify-center mx-3 p-3">
+        <div className="h-full flex flex-col items-center justify-center mx-3 p-3 bg-primary-800">
         <div className="text-center">
           <div className="mb-6">
             <p className="font-heading text-4xl md:text-left">
@@ -158,7 +159,7 @@ const CoDChaotic = () => {
           </div>
         </div>
         <div>
-            <div className="flex flex-col items-center justify-center bg-secondary-700 p-2 ">
+            <div className="flex flex-col items-center justify-center bg-primary-900 p-2 ">
             <p className="font-heading text-3xl">Bramble Phase</p>
             <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
                 <video className="sm:w-1/3 rounded-lg border border-gray-200" src={Bramble1} controls/>
@@ -167,9 +168,16 @@ const CoDChaotic = () => {
             </div>
         </div>
         <div>
-            <div className="flex flex-col items-center justify-center bg-primary-800 p-2">
+            <div className="flex flex-col items-center justify-center bg-primary-900 p-2 ">
+            <p className="font-heading text-3xl">Rotating Laser</p>
+            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
+                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={Laser} controls/>
+            </div>
+            </div>
+        </div>
+        <div>
+            <div className="flex flex-col items-center justify-center bg-primary-900 p-2">
             <p className="font-heading text-3xl">Looming Chaos</p>
-            <p className="text-xl"><i>Swaps</i></p>
             <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
                 <video className="sm:w-1/3 rounded-lg border border-gray-200" src={LoomingChaos} controls/>
                 <video className="sm:w-1/3 rounded-lg border border-gray-200" src={ChasersAoe} controls/>
