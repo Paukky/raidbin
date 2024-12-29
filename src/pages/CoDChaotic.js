@@ -146,7 +146,10 @@ const CoDChaotic = () => {
                         Wild Charge Position
                         </h5>
                         <p class="mb-3 px-1">
-                         Tank must stand in front of their group
+                            Inner <span className='text-text-healer'><b>Healers</b></span> and <span className='text-text-dps'><b>DPS</b></span> need to tuck in together 
+                            as the laser are baited towards the furthest players away in your corner. 
+                            <br/>
+                            <span className='text-text-tank'><b>Tanks</b></span> must stand in front of their group
                         </p>
                     </div>
                 </div>
