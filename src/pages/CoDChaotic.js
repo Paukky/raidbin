@@ -8,11 +8,9 @@ import TowerNS from '../assets/cod/TowerNS.png'
 import TowerEW from '../assets/cod/TowerES.png'
 import Spreads from '../assets/cod/AlliancewideSpread.png'
 import WildCharge from '../assets/cod/WildCharge.png'
-import Bramble1 from '../assets/cod/BramblePlacement.mp4'
-import Bramble2 from '../assets/cod/BrambleTether.mp4'
-import Laser from '../assets/cod/Laser.mp4'
-import LoomingChaos from '../assets/cod/LoomingChaos.mp4'
-import ChasersAoe from '../assets/cod/ChaserAoe.mp4'
+
+
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 const CoDChaotic = () => {
   return (
     <div>
@@ -161,26 +159,56 @@ const CoDChaotic = () => {
         <div>
             <div className="flex flex-col items-center justify-center bg-primary-900 p-2 ">
             <p className="font-heading text-3xl">Bramble Phase</p>
-            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
-                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={Bramble1} controls/>
-                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={Bramble2} controls/>
+            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center w-full'>
+            <iframe 
+            width="2200"
+            height="700" 
+            className="sm:w-1/3 rounded-lg border border-gray-200"
+            src="https://www.youtube.com/embed/uJzmGW-XX0s?si=ra-U-sh559OB8Vev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen/>
+            <iframe 
+            width="2200"
+            height="700" 
+            className="sm:w-1/3 rounded-lg border border-gray-200"
+            src="https://www.youtube.com/embed/yxzBqiyl_VM?si=r62SIRmc-NY88-_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen/>
             </div>
             </div>
         </div>
         <div>
             <div className="flex flex-col items-center justify-center bg-primary-900 p-2 ">
             <p className="font-heading text-3xl">Rotating Laser</p>
-            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
-                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={Laser} controls/>
+            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center w-full'>
+            <iframe 
+                width="2200"
+                height="700" 
+                className="sm:w-1/3 rounded-lg border border-gray-200"
+                src="https://www.youtube.com/embed/QCTFCjawUfw?si=42dawCaYyilyx1zp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             </div>
         </div>
         <div>
             <div className="flex flex-col items-center justify-center bg-primary-900 p-2">
             <p className="font-heading text-3xl">Looming Chaos</p>
-            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center'>
-                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={LoomingChaos} controls/>
-                <video className="sm:w-1/3 rounded-lg border border-gray-200" src={ChasersAoe} controls/>
+            <div className='flex flex-col m-2 gap-2 sm:flex-row items-center justify-center w-full'>
+            <iframe 
+                width="2200"
+                height="700"
+                className="sm:w-1/3 rounded-lg border border-gray-200"
+                src="https://www.youtube.com/embed/bafrLIgSmNk?si=iek0ZvyOGQTBrwev" 
+                frameborder="0" 
+                allow="accelerometer; 
+                clipboard-write; 
+                encrypted-media; 
+                gyroscope; 
+                picture-in-picture; 
+                web-share"
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+            />
+            <iframe 
+                width="2200"
+                height="700" 
+                className="sm:w-1/3 rounded-lg border border-gray-200"
+                src="https://www.youtube.com/embed/1csWm903po8?si=1pUkEOXDcv3FvXHu" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen/>
             </div>
             </div>
         </div>
