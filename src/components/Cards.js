@@ -2,7 +2,9 @@ import { bossData } from '../assets/bossportrait/Portrait';
 
 function importAll(r) {
     let images = {};
-    r.keys().map((item) => { images[item.replace('./', '')] = r(item); });
+    r.keys().forEach((item) => {
+        images[item.replace('./', '')] = r(item);
+    });
     return images;
 }
 const images = importAll(require.context('../assets/bossportrait', false, /\.(png|jpe?g|svg)$/));
@@ -20,6 +22,7 @@ const Cards = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="absolute z-20 w-full h-full"
+                        aria-label={`Learn more about ${data.name}`}
                     ></a>
                     <div className="absolute w-full h-full overflow-hidden">
                         <img
@@ -32,8 +35,10 @@ const Cards = () => {
                         <p className="font-bold text-xl">{data.name}</p>
                         <div className="w-full">{data.description}</div>
                         <div className="w-full md:h-1/8 mt-5 items-center justify-center hidden md:flex space-x-2">
-                            {data.bubbles.map(data => (
-                                <div className="bg-primary-800 rounded-2xl md:p-2 p-1 text-primary-50 ">{data}</div>
+                            {data.bubbles.map((bubble, index) => (
+                                <div key={index} className="bg-primary-800 rounded-2xl md:p-2 p-1 text-primary-50 ">
+                                    {bubble}
+                                </div>
                             ))}
                         </div>
                     </div>

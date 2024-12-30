@@ -31,7 +31,7 @@ const Navbar = () => {
     <div>
       <nav className="flex justify-between items-center px-2 bg-primary-500">
         <a href="/">
-          <img src={Logo} className="md:w-1/3 w-1/2" />
+          <img src={Logo} className="md:w-1/3 w-1/2" alt="Raidbin Logo"/>
         </a>
 
         <div className="md:hidden" onClick={toggleMobileMenu}>
