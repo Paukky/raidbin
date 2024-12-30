@@ -139,8 +139,9 @@ const M2S = () => {
                 <p class=" mb-3 px-1">
                   During Beat 3, these are your defamation position when it's
                   your turn to stand near the wall.
-                  <br/>
-                  <b className="text-text-tank"> OT</b> and <b className="text-text-healer">H2</b> swap their clock spot
+                  <br />
+                  <b className="text-text-tank"> OT</b> and{" "}
+                  <b className="text-text-healer">H2</b> swap their clock spot
                 </p>
               </div>
             </div>

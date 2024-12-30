@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
-import { RainingCats } from '../assets/m1s/Rainingcats'
+import { RainingCats } from "../assets/m1s/Rainingcats";
 import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from "react-icons/bs";
 
 import M1clock from "../assets/m1s/m1clock.png";

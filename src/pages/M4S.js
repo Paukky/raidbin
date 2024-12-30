@@ -164,7 +164,8 @@ const M1S = () => {
                   Shaba EE2
                 </h5>
                 <p class=" mb-3 px-1">
-                  Players will position in this configuration based on how many times they get. Regardless if they're short or long
+                  Players will position in this configuration based on how many
+                  times they get. Regardless if they're short or long
                 </p>
               </div>
             </div>
