@@ -31,12 +31,23 @@ const CoDChaotic = () => {
           <p className="font-heading text-3xl my-4">
             A and C Alliance's Position for Stygian(Adds)
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 grid-rows-2 gap-4 max-w-screen-lg ">
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 max-w-screen-lg ">
             <div class=" min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
               <img class="rounded-t-lg" src={SpreadA} alt="m1 clock position" />
               <div class="sm:p-3">
                 <h5 class="m-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 bg-">
                   [Alliance A] Spread Position
+                </h5>
+                <p class="mb-3 px-1">
+                  Stand near max melee range to avoid being hit by two lasers
+                </p>
+              </div>
+            </div>
+            <div class=" min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
+              <img class="rounded-t-lg" src={SpreadC} alt="m1 clock position" />
+              <div class="sm:p-3">
+                <h5 class="m-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 bg-">
+                  [Alliance C] Spread Position
                 </h5>
                 <p class="mb-3 px-1">
                   Stand near max melee range to avoid being hit by two lasers
@@ -54,29 +65,6 @@ const CoDChaotic = () => {
                 </p>
               </div>
             </div>
-            <div class="min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
-              <img class="rounded-t-lg" src={TowerNS} alt="m1 clock position" />
-              <div class="sm:p-3">
-                <h5 class="m-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 bg-">
-                  North and South Towers
-                </h5>
-                <p class="mb-3 px-1">
-                  Group 1 DPS will soak with Tank. Group 2 DPS will soak with
-                  Healers
-                </p>
-              </div>
-            </div>
-            <div class=" min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
-              <img class="rounded-t-lg" src={SpreadC} alt="m1 clock position" />
-              <div class="sm:p-3">
-                <h5 class="m-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 bg-">
-                  [Alliance C] Spread Position
-                </h5>
-                <p class="mb-3 px-1">
-                  Stand near max melee range to avoid being hit by two lasers
-                </p>
-              </div>
-            </div>
             <div class=" min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
               <img class="rounded-t-lg" src={PairC} alt="m1 clock position" />
               <div class="sm:p-3">
@@ -88,6 +76,18 @@ const CoDChaotic = () => {
                 </p>
               </div>
             </div>
+            <div class="min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
+              <img class="rounded-t-lg" src={TowerNS} alt="m1 clock position" />
+              <div class="sm:p-3">
+                <h5 class="m-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 bg-">
+                  North and South Towers
+                </h5>
+                <p class="mb-3 px-1">
+                  Group 1 DPS will soak with Tank. Group 2 DPS will soak with
+                  Healers
+                </p>
+              </div>
+            </div>  
             <div class="min-h-fit bg-white border border-gray-200 rounded-lg shadow my-2 bg-text-900">
               <img class="rounded-t-lg" src={TowerEW} alt="m1 clock position" />
               <div class="sm:p-3">
@@ -201,7 +201,7 @@ const CoDChaotic = () => {
               width="2200"
               height="700"
               className="sm:w-1/3 rounded-lg border border-gray-200"
-              src="https://www.youtube.com/embed/bafrLIgSmNk?si=iek0ZvyOGQTBrwev"
+              src="https://www.youtube.com/embed/U0GK5vE3AwU?si=xHVi2WPs59eo368-" 
               frameborder="0"
               title="Looming Chaos"
               allow="accelerometer; 

@@ -9,10 +9,11 @@ import M4S from "./pages/M4S";
 import Cod from "./pages/CoDChaotic"
 import Suggestion from "./pages/Suggestion";
 import Home from "./pages/Home";
-
+import { Analytics } from "@vercel/analytics/react"
 const App = () => {
   return (
     <div>
+      <Analytics/>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
